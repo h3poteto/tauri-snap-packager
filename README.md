@@ -1,14 +1,12 @@
 ## Tauri Snap Packager
 Snap packager for [Tauri](https://tauri.studio).
 
-NOTE: This will only work on Ubuntu 18.04 or older versions. See [this issue](https://github.com/tauri-apps/tauri/issues/1355).
-
 ### How To
 1. Add `tauri-snap-packager` to your tauri project root.
 ```shell
-npm install --save-dev tauri-snap-packager
+npm install --save-dev https://github.com/h3poteto/tauri-snap-packager#main
 # Or with yarn
-yarn add --dev tauri-snap-packager
+yarn add --dev https://github.com/h3poteto/tauri-snap-packager#main
 ```
 
 2. Run [tauri build](https://tauri.studio/en/docs/usage/development/publishing).

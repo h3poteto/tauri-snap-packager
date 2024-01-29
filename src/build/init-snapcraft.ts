@@ -1,9 +1,9 @@
-import { existsSync } from 'fs';
-import { writeFile, rm, mkdir } from 'fs/promises';
-import { dump } from 'js-yaml';
-import { SNAPCRAFT_YAML, SNAP_DIR } from '../constants/snapcraft-paths';
-import { BASIC_SNAPCRAFT_YAML } from '../templates/snapcraft';
-import { ITauriConf } from '../types/tauri-conf';
+import { existsSync } from 'fs'
+import { writeFile, rm, mkdir } from 'fs/promises'
+import { dump } from 'js-yaml'
+import { SNAPCRAFT_YAML, SNAP_DIR } from '../constants/snapcraft-paths'
+import { BASIC_SNAPCRAFT_YAML } from '../templates/snapcraft'
+import { ITauriConf } from '../types/tauri-conf'
 
 /**
  * Creates snapcraft.yaml
@@ -12,33 +12,35 @@ import { ITauriConf } from '../types/tauri-conf';
 export async function initSnapcraft(info: ITauriConf) {
   try {
     if (existsSync(SNAP_DIR)) {
-      await rm(SNAP_DIR, {recursive: true});
+      await rm(SNAP_DIR, { recursive: true })
     }
 
-    await mkdir(SNAP_DIR);
+    await mkdir(SNAP_DIR)
 
     const finalSnapcraftConfig = {
       ...BASIC_SNAPCRAFT_YAML,
       name: info.package.productName,
       version: info.package.version,
+      summary: info.tauri.bundle.shortDescription,
+      description: info.tauri.bundle.longDescription,
       apps: {
-        [info.package.productName]: { // Expose a command with the same name as the productName
+        [info.package.productName]: {
+          // Expose a command with the same name as the productName
           command: info.package.productName,
-          extensions: ['gnome-3-34'],
+          extensions: ['gnome-3-38'],
           desktop: `${info.package.productName}.desktop` // With a desktop file
         }
       }
     }
 
-    finalSnapcraftConfig.parts['dump-binary'].stage.push(info.package.productName);
-    finalSnapcraftConfig.parts['dump-binary'].stage.push(`${info.package.productName}.desktop`);
+    finalSnapcraftConfig.parts['dump-binary'].stage.push(info.package.productName)
+    finalSnapcraftConfig.parts['dump-binary'].stage.push(`${info.package.productName}.desktop`)
 
-    finalSnapcraftConfig.parts['dump-binary'].prime.push(info.package.productName);
-    finalSnapcraftConfig.parts['dump-binary'].prime.push(`${info.package.productName}.desktop`);
+    finalSnapcraftConfig.parts['dump-binary'].prime.push(info.package.productName)
+    finalSnapcraftConfig.parts['dump-binary'].prime.push(`${info.package.productName}.desktop`)
 
-    await writeFile(SNAPCRAFT_YAML, dump(finalSnapcraftConfig));
-  }
-  catch(e) {
-    throw e;
+    await writeFile(SNAPCRAFT_YAML, dump(finalSnapcraftConfig))
+  } catch (e) {
+    throw e
   }
 }

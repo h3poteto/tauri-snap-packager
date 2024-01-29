@@ -1,13 +1,13 @@
-import { ISnapcraftYaml } from '../types/snapcraft';
+import { ISnapcraftYaml } from '../types/snapcraft'
 
 export const BASIC_SNAPCRAFT_YAML = <ISnapcraftYaml>{
   name: 'placeholder-name',
-  base: 'core18',
+  base: 'core20',
   version: 'placeholder-version',
-  summary: 'Tauri app.',
-  description: 'Awesome Tauri app.',
+  summary: 'placeholder-summary',
+  description: 'placeholder-description',
 
-  grade: 'devel',
+  grade: 'stable',
   confinement: 'strict',
 
   apps: {},
@@ -17,17 +17,9 @@ export const BASIC_SNAPCRAFT_YAML = <ISnapcraftYaml>{
       plugin: 'dump',
       source: 'release',
       'source-type': 'local',
-      stage: [
-        'lib',
-        'icons'
-      ],
-      prime: [
-        'lib',
-        'icons'
-      ],
-      'stage-packages': [
-        'libc6'
-      ]
+      stage: ['lib', 'icons'],
+      prime: ['lib', 'icons'],
+      'stage-packages': ['libc6']
     }
   }
 }
