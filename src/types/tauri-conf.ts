@@ -1,15 +1,15 @@
 export interface ITauriConf {
   package: {
-    productName: string;
-    version: string;
-  };
+    productName: string
+    version: string
+  }
   tauri: {
     bundle: {
-      icon: string[];
-      targets: string;
-      identifier: string;
-      shortDescription: string;
-      longDescription: string;
-    };
-  };
+      icon: string[]
+      targets: string
+      identifier: string
+      shortDescription: string
+      longDescription: string
+    }
+  }
 }
