@@ -1,15 +1,15 @@
 ## Tauri Snap Packager
-Snap packager for [Tauri](https://tauri.studio).
+Snap packager for [Tauri](https://tauri.app/).
 
 ### How To
 1. Add `tauri-snap-packager` to your tauri project root.
 ```shell
-npm install --save-dev https://github.com/h3poteto/tauri-snap-packager#main
+$ npm install --save-dev @h3poteto/tauri-snap-packager@0.2.0
 # Or with yarn
-yarn add --dev https://github.com/h3poteto/tauri-snap-packager#main
+$ yarn add --dev @h3poteto/tauri-snap-packager@0.2.0
 ```
 
-2. Run [tauri build](https://tauri.studio/en/docs/usage/development/publishing).
+2. Run [tauri build](https://tauri.app/v1/api/cli/#build).
 
 3. Add the build script to package.json. (This step can be skipped if using `yarn`)
 ```json
@@ -20,9 +20,8 @@ yarn add --dev https://github.com/h3poteto/tauri-snap-packager#main
 
 4. Package!
 ```shell
-npm run tauri-snap-packager
+$ npm run tauri-snap-packager
 # Or with yarn
-yarn tauri-snap-packager
+$ yarn tauri-snap-packager
 ```
 
-****
