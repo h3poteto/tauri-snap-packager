@@ -5,6 +5,19 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@h3poteto/tauri-snap-packager@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@h3poteto/tauri-snap-packager@workspace:."
+  dependencies:
+    "@types/js-yaml": ^4.0.1
+    "@types/node": ^20.11.16
+    js-yaml: ^4.1.0
+    typescript: ^5.3.3
+  bin:
+    tauri-snap-packager: scripts/build.js
+  languageName: unknown
+  linkType: soft
+
 "@types/js-yaml@npm:^4.0.1":
   version: 4.0.9
   resolution: "@types/js-yaml@npm:4.0.9"
@@ -38,19 +51,6 @@ __metadata:
   checksum: c7830dfd456c3ef2c6e355cc5a92e6700ceafa1d14bba54497b34a99f0376cecbb3e9ac14d3e5849b426d5a5140709a66237a8c991c675431271c4ce5504151a
   languageName: node
   linkType: hard
-
-"tauri-snap-packager@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "tauri-snap-packager@workspace:."
-  dependencies:
-    "@types/js-yaml": ^4.0.1
-    "@types/node": ^20.11.16
-    js-yaml: ^4.1.0
-    typescript: ^5.3.3
-  bin:
-    tauri-snap-packager: scripts/build.js
-  languageName: unknown
-  linkType: soft
 
 "typescript@npm:^5.3.3":
   version: 5.3.3
