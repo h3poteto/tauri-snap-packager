@@ -1,5 +1,5 @@
 {
-  "name": "tauri-snap-packager",
+  "name": "@h3poteto/tauri-snap-packager",
   "version": "0.2.0",
   "description": "Snap packager for Tauri.",
   "main": "build/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/harshkhandeparkar/tauri-snap-packager.git"
+    "url": "https://github.com/h3poteto/tauri-snap-packager.git"
   },
   "keywords": [
     "tauri",
@@ -21,9 +21,9 @@
   "author": "h3poteto",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/harshkhandeparkar/tauri-snap-packager/issues"
+    "url": "https://github.com/h3poteto/tauri-snap-packager/issues"
   },
-  "homepage": "https://github.com/harshkhandeparkar/tauri-snap-packager#readme",
+  "homepage": "https://github.com/h3poteto/tauri-snap-packager",
   "devDependencies": {
     "@types/js-yaml": "^4.0.1",
     "@types/node": "^20.11.16",
