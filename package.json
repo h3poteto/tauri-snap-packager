@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "description": "Snap packager for Tauri.",
   "main": "build/index.js",
-  "bin": {
-    "tauri-snap-packager": "scripts/build.js"
-  },
+  "bin": "scripts/build.js",
   "scripts": {
     "build": "tsc",
     "npm-publish": "yarn build && yarn publish"
@@ -20,7 +18,7 @@
     "snapcraft",
     "snap"
   ],
-  "author": "ShadowWarriorPro",
+  "author": "h3poteto",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/harshkhandeparkar/tauri-snap-packager/issues"
@@ -33,5 +31,6 @@
   },
   "dependencies": {
     "js-yaml": "^4.1.0"
-  }
+  },
+  "packageManager": "yarn@3.8.0"
 }
