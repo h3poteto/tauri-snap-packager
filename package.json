@@ -1,11 +1,9 @@
 {
   "name": "@h3poteto/tauri-snap-packager",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Snap packager for Tauri.",
   "main": "build/index.js",
-  "bin": {
-    "tauri-snap-packager": "scripts/build.js"
-  },
+  "bin": "scripts/build.js",
   "scripts": {
     "build": "tsc"
   },
