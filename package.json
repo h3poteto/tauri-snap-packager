@@ -3,10 +3,11 @@
   "version": "0.2.0",
   "description": "Snap packager for Tauri.",
   "main": "build/index.js",
-  "bin": "scripts/build.js",
+  "bin": {
+    "tauri-snap-packager": "scripts/build.js"
+  },
   "scripts": {
-    "build": "tsc",
-    "npm-publish": "yarn build && yarn publish"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
