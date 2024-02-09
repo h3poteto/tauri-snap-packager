@@ -1,4 +1,5 @@
 ## Tauri Snap Packager
+This is a fork of [tauri-snap-packager](https://github.com/harshkhandeparkar/tauri-snap-packager).
 Snap packager for [Tauri](https://tauri.app/).
 
 ### How To
